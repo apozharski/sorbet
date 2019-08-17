@@ -137,6 +137,10 @@ module T::Types
       other.class == self.class && other.name == self.name
     end
 
+    def ===(other)
+      valid?(other)
+    end
+    
     alias_method :eql?, :==
   end
 end
